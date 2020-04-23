@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DynamicTabView.Model
+﻿namespace DynamicTabView.Model
 {
-    class SettingsPaths
+    public class SettingsPaths
     {
+        public string StoragePath { get; set; }
+        public string ImageLibraryPath { get; set; }
+        public string TempPath { get; set; }
     }
 }

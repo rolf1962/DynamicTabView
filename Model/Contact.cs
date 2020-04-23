@@ -1,12 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DynamicTabView.Model
 {
-    class Contact
+    public class Contact
     {
+        public Contact()
+        {
+            Addresses = new List<ContactAddress>();
+            ContactCommunications = new List<ContactCommunication>();
+        }
+
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime? Birthdate { get; set; }
+        public string Remarks { get; set; }
+
+        public ICollection<ContactAddress> Addresses { get; }
+        public ICollection<ContactCommunication> ContactCommunications { get; }
     }
 }

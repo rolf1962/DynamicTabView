@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Media;
 
 namespace DynamicTabView.Model
 {
-    class SettingsColors
+    public class SettingsColors
     {
+        public Color BackgroundColor { get; set; }
+        public Color TextColor { get; set; }
+        public Color BorderColor { get; set; }
     }
 }

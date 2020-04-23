@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DynamicTabView.Model
+﻿namespace DynamicTabView.Model
 {
-    class ContactCommunication
+    public class ContactCommunication
     {
+        public CommunicationType CommunicationType { get; set; }
+        public string Access { get; set; }
     }
 }

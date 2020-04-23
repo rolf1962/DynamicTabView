@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\ContactsContext.cs" />
+    <Compile Include="Model\CommunicationType.cs" />
     <Compile Include="Model\ContactAddress.cs" />
     <Compile Include="Model\ContactCommunication.cs" />
     <Compile Include="Model\Contact.cs" />
