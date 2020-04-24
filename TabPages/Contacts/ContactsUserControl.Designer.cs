@@ -34,28 +34,25 @@
             System.Windows.Forms.Label surnameLabel;
             System.Windows.Forms.Label remarksLabel;
             this.birthdateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.contactsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.contactsComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.contactsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             birthdateLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             surnameLabel = new System.Windows.Forms.Label();
             remarksLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BindingSource
-            // 
-            this.BindingSource.DataSource = typeof(DynamicTabView.ViewModels.ContactsUserControlViewModel);
             // 
             // birthdateLabel
             // 
             birthdateLabel.AutoSize = true;
-            birthdateLabel.Location = new System.Drawing.Point(1, 86);
+            birthdateLabel.Location = new System.Drawing.Point(4, 97);
             birthdateLabel.Name = "birthdateLabel";
             birthdateLabel.Size = new System.Drawing.Size(76, 13);
             birthdateLabel.TabIndex = 0;
@@ -64,7 +61,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(39, 33);
+            nameLabel.Location = new System.Drawing.Point(42, 44);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 2;
@@ -73,7 +70,7 @@
             // surnameLabel
             // 
             surnameLabel.AutoSize = true;
-            surnameLabel.Location = new System.Drawing.Point(25, 59);
+            surnameLabel.Location = new System.Drawing.Point(28, 70);
             surnameLabel.Name = "surnameLabel";
             surnameLabel.Size = new System.Drawing.Size(52, 13);
             surnameLabel.TabIndex = 4;
@@ -82,7 +79,7 @@
             // remarksLabel
             // 
             remarksLabel.AutoSize = true;
-            remarksLabel.Location = new System.Drawing.Point(25, 111);
+            remarksLabel.Location = new System.Drawing.Point(28, 122);
             remarksLabel.Name = "remarksLabel";
             remarksLabel.Size = new System.Drawing.Size(52, 13);
             remarksLabel.TabIndex = 6;
@@ -91,15 +88,24 @@
             // birthdateDateTimePicker
             // 
             this.birthdateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.contactsBindingSource, "Birthdate", true));
-            this.birthdateDateTimePicker.Location = new System.Drawing.Point(83, 82);
+            this.birthdateDateTimePicker.Location = new System.Drawing.Point(86, 93);
             this.birthdateDateTimePicker.Name = "birthdateDateTimePicker";
             this.birthdateDateTimePicker.Size = new System.Drawing.Size(197, 20);
             this.birthdateDateTimePicker.TabIndex = 1;
             // 
+            // contactsBindingSource
+            // 
+            this.contactsBindingSource.DataMember = "Contacts";
+            this.contactsBindingSource.DataSource = this.BindingSource;
+            // 
+            // BindingSource
+            // 
+            this.BindingSource.DataSource = typeof(DynamicTabView.ViewModels.ContactsUserControlViewModel);
+            // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactsBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(83, 30);
+            this.nameTextBox.Location = new System.Drawing.Point(86, 41);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(197, 20);
             this.nameTextBox.TabIndex = 3;
@@ -107,7 +113,7 @@
             // surnameTextBox
             // 
             this.surnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactsBindingSource, "Surname", true));
-            this.surnameTextBox.Location = new System.Drawing.Point(83, 56);
+            this.surnameTextBox.Location = new System.Drawing.Point(86, 67);
             this.surnameTextBox.Name = "surnameTextBox";
             this.surnameTextBox.Size = new System.Drawing.Size(197, 20);
             this.surnameTextBox.TabIndex = 5;
@@ -115,7 +121,7 @@
             // remarksTextBox
             // 
             this.remarksTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactsBindingSource, "Remarks", true));
-            this.remarksTextBox.Location = new System.Drawing.Point(83, 108);
+            this.remarksTextBox.Location = new System.Drawing.Point(86, 119);
             this.remarksTextBox.Name = "remarksTextBox";
             this.remarksTextBox.Size = new System.Drawing.Size(197, 20);
             this.remarksTextBox.TabIndex = 7;
@@ -126,7 +132,7 @@
             this.contactsComboBox.DataSource = this.contactsBindingSource;
             this.contactsComboBox.DisplayMember = "Surname";
             this.contactsComboBox.FormattingEnabled = true;
-            this.contactsComboBox.Location = new System.Drawing.Point(83, 3);
+            this.contactsComboBox.Location = new System.Drawing.Point(86, 14);
             this.contactsComboBox.Name = "contactsComboBox";
             this.contactsComboBox.Size = new System.Drawing.Size(300, 21);
             this.contactsComboBox.TabIndex = 8;
@@ -134,16 +140,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 7);
+            this.label1.Location = new System.Drawing.Point(30, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Auswahl:";
-            // 
-            // contactsBindingSource
-            // 
-            this.contactsBindingSource.DataMember = "Contacts";
-            this.contactsBindingSource.DataSource = this.BindingSource;
             // 
             // ContactsUserControl
             // 
@@ -160,10 +161,10 @@
             this.Controls.Add(birthdateLabel);
             this.Controls.Add(this.birthdateDateTimePicker);
             this.Name = "ContactsUserControl";
-            this.Size = new System.Drawing.Size(389, 133);
+            this.Size = new System.Drawing.Size(389, 152);
             this.Title = "Kontakt";
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +178,6 @@
         private System.Windows.Forms.ComboBox contactsComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource contactsBindingSource;
+        protected System.Windows.Forms.BindingSource BindingSource;
     }
 }
