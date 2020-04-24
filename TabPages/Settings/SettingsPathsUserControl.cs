@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DynamicTabView.TabPages
 {
-    public partial class SettingsPathsUserControl : TabPageBase
+    public partial class SettingsPathsUserControl : UserControlBase
     {
         public SettingsPathsUserControl()
         {

@@ -30,7 +30,6 @@
         {
             this.buttonContacts = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
-            this.buttonAllTogether = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonContacts
@@ -53,22 +52,11 @@
             this.buttonSettings.UseVisualStyleBackColor = true;
             this.buttonSettings.Click += new System.EventHandler(this.ButtonSettingsClick);
             // 
-            // buttonAllTogether
-            // 
-            this.buttonAllTogether.Location = new System.Drawing.Point(12, 71);
-            this.buttonAllTogether.Name = "buttonAllTogether";
-            this.buttonAllTogether.Size = new System.Drawing.Size(274, 23);
-            this.buttonAllTogether.TabIndex = 2;
-            this.buttonAllTogether.Text = "&Alle zusammen";
-            this.buttonAllTogether.UseVisualStyleBackColor = true;
-            this.buttonAllTogether.Click += new System.EventHandler(this.ButtonAllTogetherClick);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 174);
-            this.Controls.Add(this.buttonAllTogether);
+            this.ClientSize = new System.Drawing.Size(298, 79);
             this.Controls.Add(this.buttonSettings);
             this.Controls.Add(this.buttonContacts);
             this.Name = "MainForm";
@@ -81,7 +69,6 @@
 
         private System.Windows.Forms.Button buttonContacts;
         private System.Windows.Forms.Button buttonSettings;
-        private System.Windows.Forms.Button buttonAllTogether;
     }
 }
 

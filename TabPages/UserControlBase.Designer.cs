@@ -1,6 +1,6 @@
 ﻿namespace DynamicTabView.TabPages
 {
-    partial class TabPageBase
+    partial class UserControlBase
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -28,10 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
+            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // UserControlBase
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "UserControlBase";
+            this.Size = new System.Drawing.Size(299, 200);
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        protected System.Windows.Forms.BindingSource BindingSource;
     }
 }

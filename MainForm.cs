@@ -1,4 +1,6 @@
-﻿using DynamicTabView.TabPages;
+﻿using DynamicTabView.DataAccess;
+using DynamicTabView.TabPages;
+using DynamicTabView.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,37 +22,14 @@ namespace DynamicTabView
 
         private void ButtonContactsClick(object sender, EventArgs e)
         {
-            TabForm dlg = new TabForm() { Text = "Kontakte" };
-
-            dlg.AddTabPage(new ContactUserControl());
-            dlg.AddTabPage(new ContactAdressesUserControl());
-            dlg.AddTabPage(new ContactCommunicationsUserControl());
-
+            TabForm dlg = new TabForm() { Text = "Kontakte", DataContext = new TabFormContactsViewModel() };
             dlg.ShowDialog(this);
         }
 
         private void ButtonSettingsClick(object sender, EventArgs e)
         {
-            TabForm dlg = new TabForm() { Text = "Einstellungen" }; ;
-
-            dlg.AddTabPage(new SettingsPathsUserControl());
-            dlg.AddTabPage(new SettingsColorsUserControl());
-
+            TabForm dlg = new TabForm() { Text = "Einstellungen", DataContext=new TabFormSettingsViewModel() }; 
             dlg.ShowDialog(this);
-        }
-
-        private void ButtonAllTogetherClick(object sender, EventArgs e)
-        {
-            TabForm dlg = new TabForm() { Text = "Kontakte und Einstellungen" };
-
-            dlg.AddTabPage(new ContactUserControl());
-            dlg.AddTabPage(new ContactAdressesUserControl());
-            dlg.AddTabPage(new ContactCommunicationsUserControl());
-            dlg.AddTabPage(new SettingsPathsUserControl());
-            dlg.AddTabPage(new SettingsColorsUserControl());
-
-            dlg.ShowDialog(this);
-
         }
     }
 }

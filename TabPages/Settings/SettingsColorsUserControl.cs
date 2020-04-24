@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DynamicTabView.TabPages
 {
-    public partial class SettingsColorsUserControl : TabPageBase
+    public partial class SettingsColorsUserControl : UserControlBase
     {
         public SettingsColorsUserControl()
         {

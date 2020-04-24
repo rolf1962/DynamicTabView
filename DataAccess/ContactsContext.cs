@@ -1,17 +1,28 @@
 ﻿using DynamicTabView.Model;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace DynamicTabView.DataAccess
 {
     public class ContactsContext
     {
-        public ContactsContext()
+        private static ContactsContext _instance = null;
+        
+        public static ContactsContext Instance
+        {
+            get
+            {
+                if (null == _instance)
+                {
+                    _instance = new ContactsContext();
+                }
+                return _instance;
+            }
+        }
+
+        private ContactsContext()
         {
             Contacts = new List<Contact>();
             SettingsColors = new SettingsColors();
@@ -49,27 +60,27 @@ namespace DynamicTabView.DataAccess
                 HouseNo = "243A"
             });
 
-            janeDoe.ContactCommunications.Add(new ContactCommunication()
+            janeDoe.Communications.Add(new ContactCommunication()
             {
                 CommunicationType= CommunicationType.FonBusiness,
                 Access= "+44 7961 823272"
             });
 
-            janeDoe.ContactCommunications.Add(new ContactCommunication()
+            janeDoe.Communications.Add(new ContactCommunication()
             {
                 CommunicationType = CommunicationType.Email,
                 Access = "jane.doe@somewhere.org"
             });
 
-            johnDoe.ContactCommunications.Add(janeDoe.ContactCommunications.First(c => c.CommunicationType == CommunicationType.FonBusiness));
+            johnDoe.Communications.Add(janeDoe.Communications.First(c => c.CommunicationType == CommunicationType.FonBusiness));
 
-            johnDoe.ContactCommunications.Add(new ContactCommunication()
+            johnDoe.Communications.Add(new ContactCommunication()
             {
                 CommunicationType = CommunicationType.Email,
                 Access = "john.doe@somewhere.org"
             });
 
-            marvinAcme.ContactCommunications.Add(new ContactCommunication()
+            marvinAcme.Communications.Add(new ContactCommunication()
             {
                 CommunicationType = CommunicationType.Email,
                 Access = "marvin.acme@somewhere.org"

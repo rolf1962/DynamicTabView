@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamicTabView.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace DynamicTabView.TabPages
 {
     public partial class TabForm : Form
     {
+        private TabFormViewModelBase _dataContext;
         public TabForm()
         {
             InitializeComponent();
@@ -19,7 +21,24 @@ namespace DynamicTabView.TabPages
 
         public override string Text { get => base.Text; set => base.Text = value; }
 
-        public void AddTabPage(TabPageBase userControl)
+        public TabFormViewModelBase DataContext
+        {
+            get { return _dataContext; }
+            set
+            {
+                _dataContext = value;
+                
+                tabControl.TabPages.Clear();
+
+                foreach(var x in _dataContext.TabPageViewModels)
+                {
+                    UserControl userControl = UserControlSelector.SelectUserControl(x);
+                    if (userControl is UserControlBase) AddTabPage(userControl as UserControlBase);
+                }
+            }
+        }
+
+        private void AddTabPage(UserControlBase userControl)
         {
             TabPage tabPage = new TabPage(userControl.Title);
             tabPage.Controls.Add(userControl);

@@ -54,23 +54,24 @@
     <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\SettingsColors.cs" />
     <Compile Include="Model\SettingsPaths.cs" />
-    <Compile Include="TabPages\Contacts\ContactAdressesUserControl.cs">
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="TabPages\Contacts\ContactsAddressesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabPages\Contacts\ContactAdressesUserControl.Designer.cs">
-      <DependentUpon>ContactAdressesUserControl.cs</DependentUpon>
+    <Compile Include="TabPages\Contacts\ContactsAddressesUserControl.Designer.cs">
+      <DependentUpon>ContactsAddressesUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabPages\Contacts\ContactCommunicationsUserControl.cs">
+    <Compile Include="TabPages\Contacts\ContactsCommunicationsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabPages\Contacts\ContactCommunicationsUserControl.Designer.cs">
-      <DependentUpon>ContactCommunicationsUserControl.cs</DependentUpon>
+    <Compile Include="TabPages\Contacts\ContactsCommunicationsUserControl.Designer.cs">
+      <DependentUpon>ContactsCommunicationsUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabPages\Contacts\ContactUserControl.cs">
+    <Compile Include="TabPages\Contacts\ContactsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabPages\Contacts\ContactUserControl.Designer.cs">
-      <DependentUpon>ContactUserControl.cs</DependentUpon>
+    <Compile Include="TabPages\Contacts\ContactsUserControl.Designer.cs">
+      <DependentUpon>ContactsUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -98,20 +99,30 @@
     <Compile Include="TabForm.Designer.cs">
       <DependentUpon>TabForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabPages\TabPageBase.cs">
+    <Compile Include="TabPages\UserControlBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabPages\TabPageBase.Designer.cs">
-      <DependentUpon>TabPageBase.cs</DependentUpon>
+    <Compile Include="TabPages\UserControlBase.Designer.cs">
+      <DependentUpon>UserControlBase.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TabPages\Contacts\ContactAdressesUserControl.resx">
-      <DependentUpon>ContactAdressesUserControl.cs</DependentUpon>
+    <Compile Include="ViewModels\ContactsAddressesUserControlViewModel.cs" />
+    <Compile Include="ViewModels\ContactsCommunicationsUserControlViewModel.cs" />
+    <Compile Include="ViewModels\ContactsUserControlViewModel.cs" />
+    <Compile Include="ViewModels\SettingsColorsUserControlViewModel.cs" />
+    <Compile Include="ViewModels\SettingsPathsUserControlViewModel.cs" />
+    <Compile Include="ViewModels\TabFormSettingsViewModel .cs" />
+    <Compile Include="ViewModels\TabFormContactsViewModel.cs" />
+    <Compile Include="ViewModels\TabFormViewModelBase.cs" />
+    <Compile Include="ViewModels\UserControlSelector.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <EmbeddedResource Include="TabPages\Contacts\ContactsAddressesUserControl.resx">
+      <DependentUpon>ContactsAddressesUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabPages\Contacts\ContactCommunicationsUserControl.resx">
-      <DependentUpon>ContactCommunicationsUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="TabPages\Contacts\ContactsCommunicationsUserControl.resx">
+      <DependentUpon>ContactsCommunicationsUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabPages\Contacts\ContactUserControl.resx">
-      <DependentUpon>ContactUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="TabPages\Contacts\ContactsUserControl.resx">
+      <DependentUpon>ContactsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -134,6 +145,10 @@
     <EmbeddedResource Include="TabForm.resx">
       <DependentUpon>TabForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\UserControlBase.resx">
+      <DependentUpon>UserControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\DynamicTabView.ViewModels.ContactsUserControlViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

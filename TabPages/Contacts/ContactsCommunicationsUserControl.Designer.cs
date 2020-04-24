@@ -1,6 +1,6 @@
 ﻿namespace DynamicTabView.TabPages
 {
-    partial class ContactCommunicationsUserControl
+    partial class ContactsCommunicationsUserControl
     {
         /// <summary> 
         /// Erforderliche Designervariable.
