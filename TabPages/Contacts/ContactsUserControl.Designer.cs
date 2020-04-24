@@ -136,6 +136,7 @@
             this.contactsComboBox.Name = "contactsComboBox";
             this.contactsComboBox.Size = new System.Drawing.Size(300, 21);
             this.contactsComboBox.TabIndex = 8;
+            this.contactsComboBox.SelectedIndexChanged += new System.EventHandler(this.contactsComboBox_SelectedIndexChanged);
             // 
             // label1
             // 

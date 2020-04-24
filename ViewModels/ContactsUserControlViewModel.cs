@@ -1,4 +1,5 @@
 ﻿using DynamicTabView.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -24,8 +25,15 @@ namespace DynamicTabView.ViewModels
                 {
                     _currentContact = value;
                     NotifyPropertyChanged();
+                    OnCurrentContactChanged(EventArgs.Empty);
                 }
             }
+        }
+
+        public event EventHandler CurrentContactChanged;
+        private void OnCurrentContactChanged(EventArgs e)
+        {
+            CurrentContactChanged?.Invoke(this, e);
         }
     }
 }

@@ -10,7 +10,14 @@ namespace DynamicTabView.ViewModels
     {
         public TabFormContactsViewModel()
         {
+            ContactsUserControlViewModel.CurrentContactChanged += ContactsUserControlViewModel_CurrentContactChanged;
             TabPageViewModels.AddRange(new object[] { ContactsUserControlViewModel, ContactsAddressesUserControlViewModel, ContactsCommunicationsUserControlViewModel });
+        }
+
+        private void ContactsUserControlViewModel_CurrentContactChanged(object sender, EventArgs e)
+        {
+            ContactsAddressesUserControlViewModel.CurrentContact = ContactsUserControlViewModel.CurrentContact;
+            ContactsCommunicationsUserControlViewModel.CurrentContact = ContactsUserControlViewModel.CurrentContact;
         }
 
         public ContactsAddressesUserControlViewModel ContactsAddressesUserControlViewModel { get; } = new ContactsAddressesUserControlViewModel();

@@ -25,6 +25,19 @@ namespace DynamicTabView.TabPages
             if (DataContext is ContactsUserControlViewModel)
             {
                 BindingSource.DataSource = DataContext;
+                
+                if (contactsComboBox.SelectedItem != null)
+                {
+                    ((ContactsUserControlViewModel)DataContext).CurrentContact = contactsComboBox.SelectedItem as Contact;
+                }
+            }
+        }
+
+        private void contactsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DataContext is ContactsUserControlViewModel && contactsComboBox.SelectedItem != null)
+            {
+                ((ContactsUserControlViewModel)DataContext).CurrentContact = contactsComboBox.SelectedItem as Contact;
             }
         }
     }

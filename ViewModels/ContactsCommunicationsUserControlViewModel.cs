@@ -1,19 +1,18 @@
 ﻿using DynamicTabView.Model;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace DynamicTabView.ViewModels
 {
     public class ContactsCommunicationsUserControlViewModel : ViewModelBase
     {
         private ContactCommunication _currentContactCommunication;
+        private Contact _currentContact;
 
         public ContactsCommunicationsUserControlViewModel()
         {
-            ContactCommunications = new ObservableCollection<ContactCommunication>();
         }
 
-        public ObservableCollection<ContactCommunication> ContactCommunications { get; }
+        public ICollection<ContactCommunication> ContactCommunications { get { return CurrentContact?.Communications; } }
 
         public ContactCommunication CurrentContactCommunication
         {
@@ -23,6 +22,19 @@ namespace DynamicTabView.ViewModels
                 if (_currentContactCommunication != value)
                 {
                     _currentContactCommunication = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public Contact CurrentContact
+        {
+            get { return _currentContact; }
+            set
+            {
+                if (_currentContact != value)
+                {
+                    _currentContact = value;
                     NotifyPropertyChanged();
                 }
             }
