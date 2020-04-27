@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DynamicTabView.ViewModels
+﻿namespace DynamicTabView.ViewModels
 {
+    using System;
+    using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
+
     public class TabFormContactsViewModel : TabControlUserControlViewModel
     {
         public TabFormContactsViewModel()
         {
             ContactsUserControlViewModel.CurrentContactChanged += ContactsUserControlViewModel_CurrentContactChanged;
-            TabPageViewModels.AddRange(new object[] { ContactsUserControlViewModel, ContactsAddressesUserControlViewModel, ContactsCommunicationsUserControlViewModel });
+
+            TabPageUserControlViewModels.AddRange(new TabPageUserControlViewModel[]
+            {
+                ContactsUserControlViewModel,
+                ContactsAddressesUserControlViewModel,
+                ContactsCommunicationsUserControlViewModel 
+            });
         }
 
         private void ContactsUserControlViewModel_CurrentContactChanged(object sender, EventArgs e)
@@ -20,8 +23,11 @@ namespace DynamicTabView.ViewModels
             ContactsCommunicationsUserControlViewModel.CurrentContact = ContactsUserControlViewModel.CurrentContact;
         }
 
-        public ContactsAddressesUserControlViewModel ContactsAddressesUserControlViewModel { get; } = new ContactsAddressesUserControlViewModel();
-        public ContactsCommunicationsUserControlViewModel ContactsCommunicationsUserControlViewModel { get; } = new ContactsCommunicationsUserControlViewModel();
-        public ContactsUserControlViewModel ContactsUserControlViewModel { get; } = new ContactsUserControlViewModel();
+        public ContactsAddressesUserControlViewModel ContactsAddressesUserControlViewModel { get; } 
+            = new ContactsAddressesUserControlViewModel();
+        public ContactsCommunicationsUserControlViewModel ContactsCommunicationsUserControlViewModel { get; } 
+            = new ContactsCommunicationsUserControlViewModel();
+        public ContactsUserControlViewModel ContactsUserControlViewModel { get; } 
+            = new ContactsUserControlViewModel();
     }
 }

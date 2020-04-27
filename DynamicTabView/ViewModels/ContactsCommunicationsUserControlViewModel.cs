@@ -1,9 +1,10 @@
 ﻿using DynamicTabView.Model;
 using System.Collections.Generic;
+using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
 
 namespace DynamicTabView.ViewModels
 {
-    public class ContactsCommunicationsUserControlViewModel : ViewModelBase
+    public class ContactsCommunicationsUserControlViewModel : TabPageUserControlViewModel
     {
         private ContactCommunication _currentContactCommunication;
         private Contact _currentContact;

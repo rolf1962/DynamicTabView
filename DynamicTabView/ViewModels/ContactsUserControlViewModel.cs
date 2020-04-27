@@ -1,17 +1,18 @@
-﻿using DynamicTabView.Model;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace DynamicTabView.ViewModels
+﻿namespace DynamicTabView.ViewModels
 {
-    public class ContactsUserControlViewModel : ViewModelBase
+    using DynamicTabView.DataAccess;
+    using DynamicTabView.Model;
+    using System;
+    using System.Collections.ObjectModel;
+    using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
+
+    public class ContactsUserControlViewModel : TabPageUserControlViewModel
     {
         private Contact _currentContact;
 
         public ContactsUserControlViewModel()
         {
-            Contacts = new ObservableCollection<Contact>(ContactsContext.Contacts);
+            Contacts = new ObservableCollection<Contact>(ContactsContext.Instance.Contacts);
         }
 
         public ObservableCollection<Contact> Contacts { get; }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DynamicTabView.ViewModels;
 using DynamicTabView.Model;
+using ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls;
 
 namespace DynamicTabView.UserControls
 {
