@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DynamicTabView.ViewModels
 {
-    public class TabFormSettingsViewModel : TabFormViewModelBase
+    public class TabFormSettingsViewModel : TabControlUserControlViewModel
     {
         public TabFormSettingsViewModel()
         {

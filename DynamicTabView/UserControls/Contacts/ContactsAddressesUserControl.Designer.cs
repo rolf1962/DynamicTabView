@@ -1,6 +1,6 @@
-﻿namespace DynamicTabView.TabPages
+﻿namespace DynamicTabView.UserControls
 {
-    partial class ContactsCommunicationsUserControl
+    partial class ContactsAddressesUserControl
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // ContactCommunicationsUserControl
+            // ContactAdressesUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ContactCommunicationsUserControl";
-            this.Title = "Kommunikation";
+            this.Name = "ContactAdressesUserControl";
+            this.Title = "Adressen";
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,4 @@
-﻿namespace DynamicTabView.TabPages
+﻿namespace DynamicTabView.UserControls
 {
     partial class ContactsUserControl
     {

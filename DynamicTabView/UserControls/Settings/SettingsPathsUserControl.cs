@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamicTabView.TabPages
+namespace DynamicTabView.UserControls
 {
-    public partial class SettingsPathsUserControl : PageUserControl
+    public partial class SettingsPathsUserControl : TabPageUserControl
     {
         public SettingsPathsUserControl()
         {

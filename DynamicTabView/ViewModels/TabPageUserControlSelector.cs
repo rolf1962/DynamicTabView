@@ -1,4 +1,4 @@
-﻿using DynamicTabView.TabPages;
+﻿using DynamicTabView.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace DynamicTabView.ViewModels
 {
-    public static class UserControlSelector
+    public static class TabPageUserControlSelector
     {
         public static UserControl SelectUserControl(object item)
         {

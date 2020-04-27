@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamicTabView.TabPages
+namespace DynamicTabView.UserControls
 {
-    public partial class ContactsAddressesUserControl : PageUserControl
+    public partial class ContactsAddressesUserControl : TabPageUserControl
     {
         public ContactsAddressesUserControl()
         {

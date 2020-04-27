@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DynamicTabView.ViewModels
 {
-    public abstract class TabFormViewModelBase : ViewModelBase
+    public abstract class TabControlUserControlViewModel : ViewModelBase
     {
         public List<object> TabPageViewModels { get; } = new List<object>();
     }

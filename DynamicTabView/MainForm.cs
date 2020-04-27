@@ -1,5 +1,5 @@
 ﻿using DynamicTabView.DataAccess;
-using DynamicTabView.TabPages;
+using DynamicTabView.UserControls;
 using DynamicTabView.ViewModels;
 using System;
 using System.Collections.Generic;

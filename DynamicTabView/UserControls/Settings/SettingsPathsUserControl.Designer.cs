@@ -1,6 +1,6 @@
-﻿namespace DynamicTabView.TabPages
+﻿namespace DynamicTabView.UserControls
 {
-    partial class PageUserControl
+    partial class SettingsPathsUserControl
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // UserControlBase
+            // SettingsPathsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControlBase";
-            this.Size = new System.Drawing.Size(299, 200);
+            this.Name = "SettingsPathsUserControl";
+            this.Title = "Pfade";
             this.ResumeLayout(false);
 
         }

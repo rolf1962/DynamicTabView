@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DynamicTabView.ViewModels
 {
-    public class TabFormContactsViewModel : TabFormViewModelBase
+    public class TabFormContactsViewModel : TabControlUserControlViewModel
     {
         public TabFormContactsViewModel()
         {

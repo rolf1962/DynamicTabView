@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamicTabView.TabPages
+namespace DynamicTabView.UserControls
 {
-    public partial class SettingsColorsUserControl : PageUserControl
+    public partial class ContactsCommunicationsUserControl : TabPageUserControl
     {
-        public SettingsColorsUserControl()
+        public ContactsCommunicationsUserControl()
         {
             InitializeComponent();
         }

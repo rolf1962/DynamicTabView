@@ -1,6 +1,6 @@
-﻿namespace DynamicTabView.TabPages
+﻿namespace DynamicTabView.UserControls
 {
-    partial class SettingsColorsUserControl
+    partial class TabControlUserControl
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -28,18 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.SuspendLayout();
             // 
-            // SettingsColorsUserControl
+            // tabControl
+            // 
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(331, 213);
+            this.tabControl.TabIndex = 0;
+            // 
+            // TabUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "SettingsColorsUserControl";
-            this.Title = "Farben";
+            this.Controls.Add(this.tabControl);
+            this.Name = "TabUserControl";
+            this.Size = new System.Drawing.Size(331, 213);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TabControl tabControl;
     }
 }

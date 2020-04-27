@@ -32,7 +32,7 @@
             this.buttonSettings = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabUserControl = new DynamicTabView.TabPages.TabUserControl();
+            this.tabUserControl = new DynamicTabView.UserControls.TabControlUserControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -122,7 +122,7 @@
         private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private TabPages.TabUserControl tabUserControl;
+        private UserControls.TabControlUserControl tabUserControl;
     }
 }
 

@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamicTabView.TabPages
+namespace DynamicTabView.UserControls
 {
-    public partial class PageUserControl : UserControl
+    public partial class TabPageUserControl : UserControl
     {
         private object _dataContext;
 
-        public PageUserControl()
+        public TabPageUserControl()
         {
             InitializeComponent();
         }

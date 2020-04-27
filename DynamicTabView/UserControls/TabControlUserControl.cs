@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DynamicTabView.ViewModels;
 
-namespace DynamicTabView.TabPages
+namespace DynamicTabView.UserControls
 {
-    public partial class TabUserControl : UserControl
+    public partial class TabControlUserControl : UserControl
     {
-        private TabFormViewModelBase _dataContext;
+        private TabControlUserControlViewModel _dataContext;
 
-        public TabUserControl()
+        public TabControlUserControl()
         {
             InitializeComponent();
         }
 
         public override string Text { get => base.Text; set => base.Text = value; }
 
-        public TabFormViewModelBase DataContext
+        public TabControlUserControlViewModel DataContext
         {
             get { return _dataContext; }
             set
@@ -38,13 +38,13 @@ namespace DynamicTabView.TabPages
 
                 foreach (var x in _dataContext.TabPageViewModels)
                 {
-                    UserControl userControl = UserControlSelector.SelectUserControl(x);
-                    if (userControl is PageUserControl) AddTabPage(userControl as PageUserControl);
+                    UserControl userControl = TabPageUserControlSelector.SelectUserControl(x);
+                    if (userControl is TabPageUserControl) AddTabPage(userControl as TabPageUserControl);
                 }
             }
         }
 
-        private void AddTabPage(PageUserControl userControl)
+        private void AddTabPage(TabPageUserControl userControl)
         {
             TabPage tabPage = new TabPage(userControl.Title);
             tabPage.Controls.Add(userControl);
