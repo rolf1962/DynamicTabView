@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DynamicTabView.TabPages
 {
-    public partial class ContactsCommunicationsUserControl : UserControlBase
+    public partial class SettingsPathsUserControl : PageUserControl
     {
-        public ContactsCommunicationsUserControl()
+        public SettingsPathsUserControl()
         {
             InitializeComponent();
         }

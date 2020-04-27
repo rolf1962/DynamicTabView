@@ -22,14 +22,14 @@ namespace DynamicTabView
 
         private void ButtonContactsClick(object sender, EventArgs e)
         {
-            TabForm dlg = new TabForm() { Text = "Kontakte", DataContext = new TabFormContactsViewModel() };
-            dlg.ShowDialog(this);
+            Text = "Kontakte";
+            tabUserControl.DataContext = new TabFormContactsViewModel();
         }
 
         private void ButtonSettingsClick(object sender, EventArgs e)
         {
-            TabForm dlg = new TabForm() { Text = "Einstellungen", DataContext=new TabFormSettingsViewModel() }; 
-            dlg.ShowDialog(this);
+            Text = "Einstellungen";
+            tabUserControl.DataContext=new TabFormSettingsViewModel(); 
         }
     }
 }

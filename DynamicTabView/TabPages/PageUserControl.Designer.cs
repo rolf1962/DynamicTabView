@@ -1,6 +1,6 @@
 ﻿namespace DynamicTabView.TabPages
 {
-    partial class UserControlBase
+    partial class PageUserControl
     {
         /// <summary> 
         /// Erforderliche Designervariable.

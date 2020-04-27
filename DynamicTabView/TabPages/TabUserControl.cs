@@ -1,20 +1,21 @@
-﻿using DynamicTabView.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DynamicTabView.ViewModels;
 
 namespace DynamicTabView.TabPages
 {
-    public partial class TabForm : Form
+    public partial class TabUserControl : UserControl
     {
         private TabFormViewModelBase _dataContext;
-        public TabForm()
+
+        public TabUserControl()
         {
             InitializeComponent();
         }
@@ -27,18 +28,23 @@ namespace DynamicTabView.TabPages
             set
             {
                 _dataContext = value;
-                
+
+                if (_dataContext == null)
+                {
+                    return;
+                }
+
                 tabControl.TabPages.Clear();
 
-                foreach(var x in _dataContext.TabPageViewModels)
+                foreach (var x in _dataContext.TabPageViewModels)
                 {
                     UserControl userControl = UserControlSelector.SelectUserControl(x);
-                    if (userControl is UserControlBase) AddTabPage(userControl as UserControlBase);
+                    if (userControl is PageUserControl) AddTabPage(userControl as PageUserControl);
                 }
             }
         }
 
-        private void AddTabPage(UserControlBase userControl)
+        private void AddTabPage(PageUserControl userControl)
         {
             TabPage tabPage = new TabPage(userControl.Title);
             tabPage.Controls.Add(userControl);

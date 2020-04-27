@@ -99,11 +99,17 @@
     <Compile Include="TabForm.Designer.cs">
       <DependentUpon>TabForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabPages\UserControlBase.cs">
+    <Compile Include="TabPages\TabUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabPages\UserControlBase.Designer.cs">
-      <DependentUpon>UserControlBase.cs</DependentUpon>
+    <Compile Include="TabPages\TabUserControl.Designer.cs">
+      <DependentUpon>TabUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabPages\PageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\PageUserControl.Designer.cs">
+      <DependentUpon>PageUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\ContactsAddressesUserControlViewModel.cs" />
     <Compile Include="ViewModels\ContactsCommunicationsUserControlViewModel.cs" />
@@ -145,8 +151,11 @@
     <EmbeddedResource Include="TabForm.resx">
       <DependentUpon>TabForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabPages\UserControlBase.resx">
-      <DependentUpon>UserControlBase.cs</DependentUpon>
+    <EmbeddedResource Include="TabPages\TabUserControl.resx">
+      <DependentUpon>TabUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\PageUserControl.resx">
+      <DependentUpon>PageUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\DynamicTabView.ViewModels.ContactsUserControlViewModel.datasource" />
     <None Include="Properties\Settings.settings">

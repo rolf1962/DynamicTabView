@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace DynamicTabView.TabPages
 {
-    public partial class UserControlBase : UserControl
+    public partial class PageUserControl : UserControl
     {
         private object _dataContext;
 
-        public UserControlBase()
+        public PageUserControl()
         {
             InitializeComponent();
         }

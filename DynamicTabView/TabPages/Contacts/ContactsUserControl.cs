@@ -12,7 +12,7 @@ using DynamicTabView.Model;
 
 namespace DynamicTabView.TabPages
 {
-    public partial class ContactsUserControl : UserControlBase
+    public partial class ContactsUserControl : PageUserControl
     {
         public ContactsUserControl()
         {
