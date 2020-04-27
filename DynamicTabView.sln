@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTabView", "DynamicTabView\DynamicTabView.csproj", "{7307102F-EA1E-4CBD-9EE5-A14496E9BE09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViVA.LZPD.Exportmodul.DynamicTabControl", "..\ViVA.LZPD.Exportmodul.DynamicTabControl\ViVA.LZPD.Exportmodul.DynamicTabControl.csproj", "{6477C52F-DAC6-4FA2-9D25-5F60C6355807}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViVA.LZPD.Exportmodul.DynamicTabControl", "ViVA.LZPD.Exportmodul.DynamicTabControl\ViVA.LZPD.Exportmodul.DynamicTabControl.csproj", "{6477C52F-DAC6-4FA2-9D25-5F60C6355807}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
