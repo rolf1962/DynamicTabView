@@ -55,6 +55,7 @@
     <Compile Include="Model\SettingsColors.cs" />
     <Compile Include="Model\SettingsPaths.cs" />
     <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="TabPageUserControlSelector.cs" />
     <Compile Include="UserControls\Contacts\ContactsAddressesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,24 +94,6 @@
     <Compile Include="UserControls\Settings\SettingsPathsUserControl.Designer.cs">
       <DependentUpon>SettingsPathsUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TabForm.Designer.cs">
-      <DependentUpon>TabForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\TabControlUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\TabControlUserControl.Designer.cs">
-      <DependentUpon>TabControlUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\TabPageUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\TabPageUserControl.Designer.cs">
-      <DependentUpon>TabPageUserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\ContactsAddressesUserControlViewModel.cs" />
     <Compile Include="ViewModels\ContactsCommunicationsUserControlViewModel.cs" />
     <Compile Include="ViewModels\ContactsUserControlViewModel.cs" />
@@ -118,9 +101,6 @@
     <Compile Include="ViewModels\SettingsPathsUserControlViewModel.cs" />
     <Compile Include="ViewModels\TabFormSettingsViewModel .cs" />
     <Compile Include="ViewModels\TabFormContactsViewModel.cs" />
-    <Compile Include="ViewModels\TabControlUserControlViewModel.cs" />
-    <Compile Include="ViewModels\TabPageUserControlSelector.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
     <EmbeddedResource Include="UserControls\Contacts\ContactsAddressesUserControl.resx">
       <DependentUpon>ContactsAddressesUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,15 +128,6 @@
     <EmbeddedResource Include="UserControls\Settings\SettingsPathsUserControl.resx">
       <DependentUpon>SettingsPathsUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabForm.resx">
-      <DependentUpon>TabForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabControlUserControl.resx">
-      <DependentUpon>TabControlUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TabPageUserControl.resx">
-      <DependentUpon>TabPageUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\DataSources\DynamicTabView.ViewModels.ContactsUserControlViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -171,6 +142,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ViVA.LZPD.Exportmodul.DynamicTabControl\ViVA.LZPD.Exportmodul.DynamicTabControl.csproj">
+      <Project>{6477c52f-dac6-4fa2-9d25-5f60c6355807}</Project>
+      <Name>ViVA.LZPD.Exportmodul.DynamicTabControl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

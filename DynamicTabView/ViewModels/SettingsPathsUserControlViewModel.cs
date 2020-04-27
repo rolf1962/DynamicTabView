@@ -1,58 +1,16 @@
-﻿using DynamicTabView.Model;
-
-namespace DynamicTabView.ViewModels
+﻿namespace DynamicTabView.ViewModels
 {
-    public class SettingsPathsUserControlViewModel : ViewModelBase
+    using DynamicTabView.DataAccess;
+    using DynamicTabView.Model;
+    using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
+
+    public class SettingsPathsUserControlViewModel : TabPageUserControlViewModel
     {
         public SettingsPathsUserControlViewModel()
         {
-            SettingsPaths = new SettingsPaths();
+            SettingsPaths = ContactsContext.Instance.SettingsPaths;
         }
 
-        public SettingsPathsUserControlViewModel(SettingsPaths settingsPaths)
-        {
-            SettingsPaths = settingsPaths;
-        }
-
-        private SettingsPaths SettingsPaths { get; }
-
-        public string StoragePath
-        {
-            get { return SettingsPaths.StoragePath; }
-            set
-            {
-                if (SettingsPaths.StoragePath != value)
-                {
-                    SettingsPaths.StoragePath = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
-
-        public string ImageLibraryPath
-        {
-            get { return SettingsPaths.ImageLibraryPath; }
-            set
-            {
-                if (SettingsPaths.ImageLibraryPath != value)
-                {
-                    SettingsPaths.ImageLibraryPath = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
-
-        public string TempPath
-        {
-            get { return SettingsPaths.TempPath; }
-            set
-            {
-                if (SettingsPaths.TempPath != value)
-                {
-                    SettingsPaths.TempPath = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
+        public SettingsPaths SettingsPaths { get; }
     }
 }
