@@ -9,8 +9,6 @@
     {
         public override TabPageUserControl SelectUserControl(TabPageUserControlViewModel tabPageUserControlViewModel)
         {
-            base.SelectUserControl(tabPageUserControlViewModel);
-
             if (tabPageUserControlViewModel is ContactsUserControlViewModel)
             {
                 return new ContactsUserControl() { DataContext = tabPageUserControlViewModel };

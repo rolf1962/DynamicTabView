@@ -1,27 +1,36 @@
 ﻿namespace ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls
 {
-    using System;
-    using System.Collections.Generic;
     using System.Windows.Forms;
     using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
 
     public partial class TabControlUserControl : UserControl
     {
-        public TabControlUserControl(List<TabPageUserControlViewModel> tabPageUserControlViewModels, TabPageUserControlSelector tabPageUserControlSelector)
+        private TabControlUserControlViewModel _dataContext;
+
+        public TabControlUserControl()
         {
             InitializeComponent();
 
-            if (null == tabPageUserControlViewModels) { throw new ArgumentNullException(nameof(tabPageUserControlViewModels)); }
-            if (null == tabPageUserControlSelector) { throw new ArgumentNullException(nameof(tabPageUserControlSelector)); }
+        }
 
-            TabPageUserControlViewModels = tabPageUserControlViewModels;
-            TabPageUserControlSelector = tabPageUserControlSelector;
-
-            tabControl.TabPages.Clear();
-
-            foreach (TabPageUserControlViewModel tabPageUserControlViewModel in TabPageUserControlViewModels)
+        public TabControlUserControlViewModel DataContext
+        {
+            get { return _dataContext; }
+            set
             {
-                AddTabPage(TabPageUserControlSelector.SelectUserControl(tabPageUserControlViewModel));
+                _dataContext = value;
+
+                if (_dataContext == null)
+                {
+                    return;
+                }
+
+                tabControl.TabPages.Clear();
+
+                foreach (TabPageUserControlViewModel tabPageUserControlViewModel in _dataContext.TabPageUserControlViewModels)
+                {
+                    AddTabPage(_dataContext.TabPageUserControlSelector.SelectUserControl(tabPageUserControlViewModel));
+                }
             }
         }
 
@@ -31,8 +40,5 @@
             tabPage.Controls.Add(userControl);
             tabControl.TabPages.Add(tabPage);
         }
-
-        public List<TabPageUserControlViewModel> TabPageUserControlViewModels { get; } = new List<TabPageUserControlViewModel>();
-        public TabPageUserControlSelector TabPageUserControlSelector { get; set; }
     }
 }

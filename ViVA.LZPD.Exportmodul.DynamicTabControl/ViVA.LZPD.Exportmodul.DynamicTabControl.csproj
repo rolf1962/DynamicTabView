@@ -57,6 +57,7 @@
     <Compile Include="UserControls\TabPageUserControl.Designer.cs">
       <DependentUpon>TabPageUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\TabControlUserControlViewModel.cs" />
     <Compile Include="ViewModels\TabPageUserControlViewModel.cs" />
   </ItemGroup>
   <ItemGroup />

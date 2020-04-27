@@ -1,9 +1,9 @@
-﻿using DynamicTabView.Model;
-using System.Collections.Generic;
-using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
-
-namespace DynamicTabView.ViewModels
+﻿namespace DynamicTabView.ViewModels
 {
+    using DynamicTabView.Model;
+    using System.Collections.Generic;
+    using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
+
     public class ContactsAddressesUserControlViewModel : TabPageUserControlViewModel
     {
         private ContactAddress _currentContactAddress;
