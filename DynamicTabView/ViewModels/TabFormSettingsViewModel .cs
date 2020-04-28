@@ -4,11 +4,11 @@
 
     public class TabFormSettingsViewModel : TabControlUserControlViewModel
     {
-        public TabFormSettingsViewModel()
+        public TabFormSettingsViewModel(TabPageUserControlSelector tabPageUserControlSelector) : base(tabPageUserControlSelector)
         {
-            TabPageUserControlViewModels.AddRange(new TabPageUserControlViewModel[] 
-            { 
-                SettingsPathsUserControlViewModel, 
+            TabPageUserControlViewModels.AddRange(new TabPageUserControlViewModel[]
+            {
+                SettingsPathsUserControlViewModel,
             });
         }
         public SettingsPathsUserControlViewModel SettingsPathsUserControlViewModel { get; } = new SettingsPathsUserControlViewModel();

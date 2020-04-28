@@ -5,7 +5,7 @@
 
     public class TabFormContactsViewModel : TabControlUserControlViewModel
     {
-        public TabFormContactsViewModel()
+        public TabFormContactsViewModel(TabPageUserControlSelector tabPageUserControlSelector) : base(tabPageUserControlSelector)
         {
             ContactsUserControlViewModel.CurrentContactChanged += ContactsUserControlViewModel_CurrentContactChanged;
 
@@ -13,7 +13,7 @@
             {
                 ContactsUserControlViewModel,
                 ContactsAddressesUserControlViewModel,
-                ContactsCommunicationsUserControlViewModel 
+                ContactsCommunicationsUserControlViewModel
             });
         }
 
@@ -23,11 +23,11 @@
             ContactsCommunicationsUserControlViewModel.CurrentContact = ContactsUserControlViewModel.CurrentContact;
         }
 
-        public ContactsAddressesUserControlViewModel ContactsAddressesUserControlViewModel { get; } 
+        public ContactsAddressesUserControlViewModel ContactsAddressesUserControlViewModel { get; }
             = new ContactsAddressesUserControlViewModel();
-        public ContactsCommunicationsUserControlViewModel ContactsCommunicationsUserControlViewModel { get; } 
+        public ContactsCommunicationsUserControlViewModel ContactsCommunicationsUserControlViewModel { get; }
             = new ContactsCommunicationsUserControlViewModel();
-        public ContactsUserControlViewModel ContactsUserControlViewModel { get; } 
+        public ContactsUserControlViewModel ContactsUserControlViewModel { get; }
             = new ContactsUserControlViewModel();
     }
 }

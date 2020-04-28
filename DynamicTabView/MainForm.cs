@@ -13,8 +13,8 @@
         {
             InitializeComponent();
 
-            tabFormContactsViewModel= new TabFormContactsViewModel() { TabPageUserControlSelector = new TabPageUserControlSelector() };
-            tabFormSettingsViewModel= new TabFormSettingsViewModel() { TabPageUserControlSelector = new TabPageUserControlSelector() };
+            tabFormContactsViewModel = new TabFormContactsViewModel(new TabPageUserControlSelector());
+            tabFormSettingsViewModel = new TabFormSettingsViewModel(new TabPageUserControlSelector());
         }
 
         private void ButtonContactsClick(object sender, EventArgs e)
