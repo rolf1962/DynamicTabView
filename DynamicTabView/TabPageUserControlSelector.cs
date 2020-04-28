@@ -21,10 +21,6 @@
             {
                 return new ContactsCommunicationsUserControl(tabPageUserControlViewModel as ContactsCommunicationsUserControlViewModel);
             }
-            if (tabPageUserControlViewModel is SettingsColorsUserControlViewModel)
-            {
-                return new SettingsColorsUserControl(tabPageUserControlViewModel as SettingsColorsUserControlViewModel);
-            }
             if (tabPageUserControlViewModel is SettingsPathsUserControlViewModel)
             {
                 return new SettingsPathsUserControl(tabPageUserControlViewModel as SettingsPathsUserControlViewModel);

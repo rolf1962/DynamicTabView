@@ -25,7 +25,6 @@ namespace DynamicTabView.DataAccess
         private ContactsContext()
         {
             Contacts = new List<Contact>();
-            SettingsColors = new SettingsColors();
             SettingsPaths = new SettingsPaths();
 
             CreateData();
@@ -86,17 +85,12 @@ namespace DynamicTabView.DataAccess
                 Access = "marvin.acme@somewhere.org"
             });
 
-            SettingsColors.BackgroundColor = Colors.Blue;
-            SettingsColors.BorderColor = Colors.Yellow;
-            SettingsColors.TextColor = Colors.Red;
-
             SettingsPaths.ImageLibraryPath = @".\ImageLibrary";
             SettingsPaths.StoragePath = @".\Data";
             SettingsPaths.TempPath = Environment.GetEnvironmentVariable("TEMP");
         }
 
         public ICollection<Contact> Contacts { get; }
-        public SettingsColors SettingsColors { get; }
         public SettingsPaths SettingsPaths { get; }
     }
 }

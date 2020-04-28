@@ -17,6 +17,7 @@ namespace DynamicTabView.UserControls
         public SettingsPathsUserControl(SettingsPathsUserControlViewModel settingsPathsUserControlViewModel) : base(settingsPathsUserControlViewModel)
         {
             InitializeComponent();
+            BindingSource.DataSource = DataContext;
         }
     }
 }

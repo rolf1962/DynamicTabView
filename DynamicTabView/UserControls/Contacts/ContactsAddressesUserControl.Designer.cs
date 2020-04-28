@@ -55,7 +55,7 @@
             // cityLabel
             // 
             cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(126, 38);
+            cityLabel.Location = new System.Drawing.Point(146, 38);
             cityLabel.Name = "cityLabel";
             cityLabel.Size = new System.Drawing.Size(27, 13);
             cityLabel.TabIndex = 1;
@@ -110,9 +110,9 @@
             // cityTextBox
             // 
             this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "CurrentContactAddress.City", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cityTextBox.Location = new System.Drawing.Point(159, 35);
+            this.cityTextBox.Location = new System.Drawing.Point(179, 35);
             this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(206, 20);
+            this.cityTextBox.Size = new System.Drawing.Size(186, 20);
             this.cityTextBox.TabIndex = 2;
             // 
             // houseNoTextBox
@@ -136,7 +136,7 @@
             this.zipCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "CurrentContactAddress.ZipCode", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.zipCodeTextBox.Location = new System.Drawing.Point(65, 35);
             this.zipCodeTextBox.Name = "zipCodeTextBox";
-            this.zipCodeTextBox.Size = new System.Drawing.Size(55, 20);
+            this.zipCodeTextBox.Size = new System.Drawing.Size(75, 20);
             this.zipCodeTextBox.TabIndex = 8;
             // 
             // label1

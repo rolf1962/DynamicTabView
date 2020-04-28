@@ -52,7 +52,6 @@
     <Compile Include="Model\ContactAddress.cs" />
     <Compile Include="Model\ContactCommunication.cs" />
     <Compile Include="Model\Contact.cs" />
-    <Compile Include="Model\SettingsColors.cs" />
     <Compile Include="Model\SettingsPaths.cs" />
     <Compile Include="TabPageUserControlSelector.cs" />
     <Compile Include="UserControls\Contacts\ContactsAddressesUserControl.cs">
@@ -81,12 +80,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\Settings\SettingsColorsUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Settings\SettingsColorsUserControl.Designer.cs">
-      <DependentUpon>SettingsColorsUserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\Settings\SettingsPathsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,7 +89,6 @@
     <Compile Include="ViewModels\ContactsAddressesUserControlViewModel.cs" />
     <Compile Include="ViewModels\ContactsCommunicationsUserControlViewModel.cs" />
     <Compile Include="ViewModels\ContactsUserControlViewModel.cs" />
-    <Compile Include="ViewModels\SettingsColorsUserControlViewModel.cs" />
     <Compile Include="ViewModels\SettingsPathsUserControlViewModel.cs" />
     <Compile Include="ViewModels\TabFormSettingsViewModel .cs" />
     <Compile Include="ViewModels\TabFormContactsViewModel.cs" />
@@ -121,9 +113,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\Settings\SettingsColorsUserControl.resx">
-      <DependentUpon>SettingsColorsUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Settings\SettingsPathsUserControl.resx">
       <DependentUpon>SettingsPathsUserControl.cs</DependentUpon>
     </EmbeddedResource>
