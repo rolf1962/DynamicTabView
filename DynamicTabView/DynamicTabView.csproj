@@ -128,7 +128,6 @@
     <EmbeddedResource Include="UserControls\Settings\SettingsPathsUserControl.resx">
       <DependentUpon>SettingsPathsUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\DynamicTabView.ViewModels.ContactsUserControlViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -130,7 +130,6 @@
             // 
             this.contactsComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.BindingSource, "CurrentContact", true));
             this.contactsComboBox.DataSource = this.contactsBindingSource;
-            this.contactsComboBox.DisplayMember = "Surname";
             this.contactsComboBox.FormattingEnabled = true;
             this.contactsComboBox.Location = new System.Drawing.Point(86, 14);
             this.contactsComboBox.Name = "contactsComboBox";

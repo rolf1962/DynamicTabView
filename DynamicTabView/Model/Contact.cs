@@ -70,5 +70,15 @@ namespace DynamicTabView.Model
 
         public ICollection<ContactAddress> Addresses { get; }
         public ICollection<ContactCommunication> Communications { get; }
+
+        public override string ToString()
+        {
+            return string.Join(", ", new object[]
+            {
+                Name,
+                Surname,
+                Birthdate.HasValue? Birthdate.Value.ToShortDateString() : null
+            });
+        }
     }
 }

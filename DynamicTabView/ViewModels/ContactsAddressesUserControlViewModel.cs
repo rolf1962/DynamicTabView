@@ -2,6 +2,8 @@
 {
     using DynamicTabView.Model;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
     using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
 
     public class ContactsAddressesUserControlViewModel : TabPageUserControlViewModel
@@ -13,7 +15,7 @@
         {
         }
 
-        public ICollection<ContactAddress> ContactAddresses { get { return CurrentContact?.Addresses; } }
+        public ObservableCollection<ContactAddress> ContactAddresses { get { return new ObservableCollection<ContactAddress>(CurrentContact?.Addresses); } }
 
         public ContactAddress CurrentContactAddress
         {
@@ -37,6 +39,7 @@
                 {
                     _currentContact = value;
                     NotifyPropertyChanged();
+                    CurrentContactAddress = ContactAddresses.FirstOrDefault();
                 }
             }
         }

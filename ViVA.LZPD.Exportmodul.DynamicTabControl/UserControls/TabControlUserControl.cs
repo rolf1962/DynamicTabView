@@ -1,5 +1,6 @@
 ﻿namespace ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls
 {
+    using System.ComponentModel;
     using System.Windows.Forms;
     using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
 
@@ -13,6 +14,7 @@
 
         }
 
+        [Description("Eine Implementierung der abstrakten Klasse \"TabControlUserControlViewModel\"."), Category("DynamicTabControl")]
         public TabControlUserControlViewModel DataContext
         {
             get { return _dataContext; }

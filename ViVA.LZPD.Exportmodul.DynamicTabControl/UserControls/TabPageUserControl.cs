@@ -1,20 +1,24 @@
 ﻿namespace ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls
 {
     using System;
+    using System.ComponentModel;
     using System.Windows.Forms;
+    using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
 
     public partial class TabPageUserControl : UserControl
     {
-        private object _dataContext;
+        private TabPageUserControlViewModel _dataContext;
 
         public TabPageUserControl()
         {
             InitializeComponent();
         }
 
+        [Description("Der Text, der auf dem Tab angezeigt wird."), Category("DynamicTabControl")]
         public string Title { get; set; }
 
-        public object DataContext
+        [Description("Eine Implementierung der abstrakten Klasse \"TabPageUserControlViewModel\"."), Category("DynamicTabControl")]
+        public TabPageUserControlViewModel DataContext
         {
             get { return _dataContext; }
             set
