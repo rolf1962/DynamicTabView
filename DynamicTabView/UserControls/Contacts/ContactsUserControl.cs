@@ -1,36 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DynamicTabView.ViewModels;
-using DynamicTabView.Model;
-using ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls;
-
-namespace DynamicTabView.UserControls
+﻿namespace DynamicTabView.UserControls
 {
+    using DynamicTabView.Model;
+    using DynamicTabView.ViewModels;
+    using System;
+    using System.Windows.Forms;
+    using ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls;
+
     public partial class ContactsUserControl : TabPageUserControl
     {
-        public ContactsUserControl()
+        public ContactsUserControl(ContactsUserControlViewModel contactsUserControlViewModel) : base(contactsUserControlViewModel)
         {
             InitializeComponent();
-            base.DataContextChanged += OnDataContextChanged;
-        }
 
-        private void OnDataContextChanged(object sender, EventArgs e)
-        {
-            if (DataContext is ContactsUserControlViewModel)
+            BindingSource.DataSource = DataContext;
+
+            if (contactsComboBox.SelectedItem != null)
             {
-                BindingSource.DataSource = DataContext;
-                
-                if (contactsComboBox.SelectedItem != null)
-                {
-                    ((ContactsUserControlViewModel)DataContext).CurrentContact = contactsComboBox.SelectedItem as Contact;
-                }
+                ((ContactsUserControlViewModel)DataContext).CurrentContact = contactsComboBox.SelectedItem as Contact;
             }
         }
 

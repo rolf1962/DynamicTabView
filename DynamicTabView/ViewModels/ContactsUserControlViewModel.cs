@@ -3,7 +3,7 @@
     using DynamicTabView.DataAccess;
     using DynamicTabView.Model;
     using System;
-    using System.Collections.ObjectModel;
+    using System.Collections.Generic;
     using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
 
     public class ContactsUserControlViewModel : TabPageUserControlViewModel
@@ -12,10 +12,10 @@
 
         public ContactsUserControlViewModel()
         {
-            Contacts = new ObservableCollection<Contact>(ContactsContext.Instance.Contacts);
+            Contacts = new List<Contact>(ContactsContext.Instance.Contacts);
         }
 
-        public ObservableCollection<Contact> Contacts { get; }
+        public List<Contact> Contacts { get; }
 
         public Contact CurrentContact
         {

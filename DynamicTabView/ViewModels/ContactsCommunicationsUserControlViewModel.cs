@@ -2,7 +2,6 @@
 {
     using DynamicTabView.Model;
     using System.Collections.Generic;
-    using System.Collections.ObjectModel;
     using System.Linq;
     using ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels;
 
@@ -15,7 +14,16 @@
         {
         }
 
-        public ObservableCollection<ContactCommunication> ContactCommunications { get { return new ObservableCollection<ContactCommunication>(CurrentContact?.Communications); } }
+        public List<ContactCommunication> ContactCommunications
+        {
+            get
+            {
+                return null ==
+                    CurrentContact ?
+                    new List<ContactCommunication>() :
+                    new List<ContactCommunication>(CurrentContact.Communications);
+            }
+        }
 
         public ContactCommunication CurrentContactCommunication
         {

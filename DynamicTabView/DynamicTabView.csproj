@@ -54,7 +54,6 @@
     <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\SettingsColors.cs" />
     <Compile Include="Model\SettingsPaths.cs" />
-    <Compile Include="Model\ModelBase.cs" />
     <Compile Include="TabPageUserControlSelector.cs" />
     <Compile Include="UserControls\Contacts\ContactsAddressesUserControl.cs">
       <SubType>UserControl</SubType>

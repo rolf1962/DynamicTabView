@@ -11,23 +11,23 @@
         {
             if (tabPageUserControlViewModel is ContactsUserControlViewModel)
             {
-                return new ContactsUserControl() { DataContext = tabPageUserControlViewModel };
+                return new ContactsUserControl(tabPageUserControlViewModel as ContactsUserControlViewModel);
             }
             if (tabPageUserControlViewModel is ContactsAddressesUserControlViewModel)
             {
-                return new ContactsAddressesUserControl() { DataContext = tabPageUserControlViewModel };
+                return new ContactsAddressesUserControl(tabPageUserControlViewModel as ContactsAddressesUserControlViewModel);
             }
             if (tabPageUserControlViewModel is ContactsCommunicationsUserControlViewModel)
             {
-                return new ContactsCommunicationsUserControl() { DataContext = tabPageUserControlViewModel };
+                return new ContactsCommunicationsUserControl(tabPageUserControlViewModel as ContactsCommunicationsUserControlViewModel);
             }
             if (tabPageUserControlViewModel is SettingsColorsUserControlViewModel)
             {
-                return new SettingsColorsUserControl() { DataContext = tabPageUserControlViewModel };
+                return new SettingsColorsUserControl(tabPageUserControlViewModel as SettingsColorsUserControlViewModel);
             }
             if (tabPageUserControlViewModel is SettingsPathsUserControlViewModel)
             {
-                return new SettingsPathsUserControl() { DataContext = tabPageUserControlViewModel };
+                return new SettingsPathsUserControl(tabPageUserControlViewModel as SettingsPathsUserControlViewModel);
             }
 
             return null;

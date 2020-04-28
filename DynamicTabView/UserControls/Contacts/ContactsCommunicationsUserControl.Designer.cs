@@ -104,7 +104,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(396, 93);
+            this.panel1.Size = new System.Drawing.Size(396, 91);
             this.panel1.TabIndex = 13;
             // 
             // accessTextBox
@@ -112,7 +112,7 @@
             this.accessTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.communicationsBindingSource, "Access", true));
             this.accessTextBox.Location = new System.Drawing.Point(65, 35);
             this.accessTextBox.Name = "accessTextBox";
-            this.accessTextBox.Size = new System.Drawing.Size(159, 20);
+            this.accessTextBox.Size = new System.Drawing.Size(151, 20);
             this.accessTextBox.TabIndex = 10;
             // 
             // communicationTypeTextBox
@@ -120,7 +120,7 @@
             this.communicationTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.communicationsBindingSource, "CommunicationType", true));
             this.communicationTypeTextBox.Location = new System.Drawing.Point(65, 61);
             this.communicationTypeTextBox.Name = "communicationTypeTextBox";
-            this.communicationTypeTextBox.Size = new System.Drawing.Size(159, 20);
+            this.communicationTypeTextBox.Size = new System.Drawing.Size(151, 20);
             this.communicationTypeTextBox.TabIndex = 12;
             // 
             // label2
@@ -143,7 +143,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Name = "ContactsCommunicationsUserControl";
-            this.Size = new System.Drawing.Size(396, 134);
+            this.Size = new System.Drawing.Size(396, 117);
             this.Title = "Kommunikation";
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.communicationsBindingSource)).EndInit();
