@@ -12,6 +12,7 @@
 
         public ContactsCommunicationsUserControlViewModel()
         {
+            TabText = "Kommunikation";
         }
 
         public List<ContactCommunication> ContactCommunications

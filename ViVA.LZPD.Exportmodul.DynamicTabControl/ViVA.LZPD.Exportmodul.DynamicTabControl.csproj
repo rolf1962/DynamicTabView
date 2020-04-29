@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="ViewModels\TabControlUserControlViewModel.cs" />
     <Compile Include="ViewModels\TabPageUserControlViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

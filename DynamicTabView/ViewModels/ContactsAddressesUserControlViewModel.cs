@@ -12,6 +12,7 @@
 
         public ContactsAddressesUserControlViewModel()
         {
+            TabText = "Adressen";
         }
 
         public List<ContactAddress> ContactAddresses

@@ -8,6 +8,7 @@
     {
         public SettingsPathsUserControlViewModel()
         {
+            TabText = "Pfade";
             SettingsPaths = ContactsContext.Instance.SettingsPaths;
         }
 

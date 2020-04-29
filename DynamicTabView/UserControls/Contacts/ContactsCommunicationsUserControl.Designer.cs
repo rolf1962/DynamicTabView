@@ -142,9 +142,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "TabText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Name = "ContactsCommunicationsUserControl";
             this.Size = new System.Drawing.Size(396, 117);
-            this.Title = "Kommunikation";
+            this.Text = "";
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.communicationsBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);

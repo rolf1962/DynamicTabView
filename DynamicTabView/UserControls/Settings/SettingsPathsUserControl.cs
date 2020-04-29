@@ -1,22 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls;
-using DynamicTabView.ViewModels;
-
-namespace DynamicTabView.UserControls
+﻿namespace DynamicTabView.UserControls
 {
+    using DynamicTabView.ViewModels;
+    using System.Windows.Forms;
+    using ViVA.LZPD.Exportmodul.DynamicTabControl.UserControls;
+
     public partial class SettingsPathsUserControl : TabPageUserControl
     {
-        public SettingsPathsUserControl(SettingsPathsUserControlViewModel settingsPathsUserControlViewModel) : base(settingsPathsUserControlViewModel)
+        public SettingsPathsUserControl()
         {
             InitializeComponent();
+            DataContextChanged += OnDataContextChanged;
+        }
+
+        private void OnDataContextChanged(object sender, System.EventArgs e)
+        {
             BindingSource.DataSource = DataContext;
         }
     }

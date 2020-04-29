@@ -7,15 +7,21 @@
 
     public partial class ContactsCommunicationsUserControl : TabPageUserControl
     {
-        public ContactsCommunicationsUserControl(ContactsCommunicationsUserControlViewModel contactsCommunicationsUserControlViewModel) : base(contactsCommunicationsUserControlViewModel)
+        public ContactsCommunicationsUserControl()
         {
             InitializeComponent();
+            DataContextChanged += OnDataContextChanged;
+        }
 
+        private void OnDataContextChanged(object sender, System.EventArgs e)
+        {
             BindingSource.DataSource = DataContext;
 
-            if (communicationsComboBox.SelectedItem != null)
+            if (communicationsComboBox.SelectedItem != null && 
+                ((ContactsCommunicationsUserControlViewModel)DataContext).CurrentContactCommunication == null)
             {
-                ((ContactsCommunicationsUserControlViewModel)DataContext).CurrentContactCommunication = communicationsComboBox.SelectedItem as ContactCommunication;
+                ((ContactsCommunicationsUserControlViewModel)DataContext).CurrentContactCommunication = 
+                    communicationsComboBox.SelectedItem as ContactCommunication;
             }
         }
     }

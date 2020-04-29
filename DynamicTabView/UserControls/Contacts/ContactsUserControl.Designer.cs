@@ -160,9 +160,10 @@
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(birthdateLabel);
             this.Controls.Add(this.birthdateDateTimePicker);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "TabText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Name = "ContactsUserControl";
             this.Size = new System.Drawing.Size(389, 152);
-            this.Title = "Kontakt";
+            this.Text = "";
             ((System.ComponentModel.ISupportInitialize)(this.contactsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);

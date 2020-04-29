@@ -38,7 +38,8 @@
 
         private void AddTabPage(TabPageUserControl userControl)
         {
-            TabPage tabPage = new TabPage(userControl.Title);
+            TabPage tabPage = new TabPage();
+            tabPage.DataBindings.Add(nameof(TabPage.Text), userControl.DataContext.TabText, null);
             tabPage.Controls.Add(userControl);
             tabControl.TabPages.Add(tabPage);
         }

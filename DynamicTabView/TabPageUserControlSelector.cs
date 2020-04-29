@@ -9,24 +9,31 @@
     {
         public override TabPageUserControl SelectUserControl(TabPageUserControlViewModel tabPageUserControlViewModel)
         {
+            TabPageUserControl tabPageUserControl = null;
+
             if (tabPageUserControlViewModel is ContactsUserControlViewModel)
             {
-                return new ContactsUserControl(tabPageUserControlViewModel as ContactsUserControlViewModel);
+                tabPageUserControl = new ContactsUserControl();
             }
             if (tabPageUserControlViewModel is ContactsAddressesUserControlViewModel)
             {
-                return new ContactsAddressesUserControl(tabPageUserControlViewModel as ContactsAddressesUserControlViewModel);
+                tabPageUserControl = new ContactsAddressesUserControl();
             }
             if (tabPageUserControlViewModel is ContactsCommunicationsUserControlViewModel)
             {
-                return new ContactsCommunicationsUserControl(tabPageUserControlViewModel as ContactsCommunicationsUserControlViewModel);
+                tabPageUserControl = new ContactsCommunicationsUserControl();
             }
             if (tabPageUserControlViewModel is SettingsPathsUserControlViewModel)
             {
-                return new SettingsPathsUserControl(tabPageUserControlViewModel as SettingsPathsUserControlViewModel);
+                tabPageUserControl = new SettingsPathsUserControl();
             }
 
-            return null;
+            if (null != tabPageUserControl)
+            {
+                tabPageUserControl.DataContext = tabPageUserControlViewModel;
+            }
+
+            return tabPageUserControl;
         }
     }
 }

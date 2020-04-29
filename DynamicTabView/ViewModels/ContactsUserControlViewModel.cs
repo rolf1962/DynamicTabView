@@ -12,6 +12,7 @@
 
         public ContactsUserControlViewModel()
         {
+            TabText = "Kontakte";
             Contacts = new List<Contact>(ContactsContext.Instance.Contacts);
         }
 

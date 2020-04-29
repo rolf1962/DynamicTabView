@@ -32,19 +32,15 @@
             System.Windows.Forms.Label imageLibraryPathLabel;
             System.Windows.Forms.Label storagePathLabel;
             System.Windows.Forms.Label tempPathLabel;
-            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.imageLibraryPathTextBox = new System.Windows.Forms.TextBox();
             this.storagePathTextBox = new System.Windows.Forms.TextBox();
             this.tempPathTextBox = new System.Windows.Forms.TextBox();
+            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             imageLibraryPathLabel = new System.Windows.Forms.Label();
             storagePathLabel = new System.Windows.Forms.Label();
             tempPathLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BindingSource
-            // 
-            this.BindingSource.DataSource = typeof(DynamicTabView.ViewModels.SettingsPathsUserControlViewModel);
             // 
             // imageLibraryPathLabel
             // 
@@ -55,14 +51,6 @@
             imageLibraryPathLabel.TabIndex = 1;
             imageLibraryPathLabel.Text = "Image Library Path:";
             // 
-            // imageLibraryPathTextBox
-            // 
-            this.imageLibraryPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "SettingsPaths.ImageLibraryPath", true));
-            this.imageLibraryPathTextBox.Location = new System.Drawing.Point(119, 3);
-            this.imageLibraryPathTextBox.Name = "imageLibraryPathTextBox";
-            this.imageLibraryPathTextBox.Size = new System.Drawing.Size(273, 20);
-            this.imageLibraryPathTextBox.TabIndex = 2;
-            // 
             // storagePathLabel
             // 
             storagePathLabel.AutoSize = true;
@@ -71,14 +59,6 @@
             storagePathLabel.Size = new System.Drawing.Size(72, 13);
             storagePathLabel.TabIndex = 3;
             storagePathLabel.Text = "Storage Path:";
-            // 
-            // storagePathTextBox
-            // 
-            this.storagePathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "SettingsPaths.StoragePath", true));
-            this.storagePathTextBox.Location = new System.Drawing.Point(119, 29);
-            this.storagePathTextBox.Name = "storagePathTextBox";
-            this.storagePathTextBox.Size = new System.Drawing.Size(273, 20);
-            this.storagePathTextBox.TabIndex = 4;
             // 
             // tempPathLabel
             // 
@@ -89,6 +69,22 @@
             tempPathLabel.TabIndex = 5;
             tempPathLabel.Text = "Temp Path:";
             // 
+            // imageLibraryPathTextBox
+            // 
+            this.imageLibraryPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "SettingsPaths.ImageLibraryPath", true));
+            this.imageLibraryPathTextBox.Location = new System.Drawing.Point(119, 3);
+            this.imageLibraryPathTextBox.Name = "imageLibraryPathTextBox";
+            this.imageLibraryPathTextBox.Size = new System.Drawing.Size(273, 20);
+            this.imageLibraryPathTextBox.TabIndex = 2;
+            // 
+            // storagePathTextBox
+            // 
+            this.storagePathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "SettingsPaths.StoragePath", true));
+            this.storagePathTextBox.Location = new System.Drawing.Point(119, 29);
+            this.storagePathTextBox.Name = "storagePathTextBox";
+            this.storagePathTextBox.Size = new System.Drawing.Size(273, 20);
+            this.storagePathTextBox.TabIndex = 4;
+            // 
             // tempPathTextBox
             // 
             this.tempPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "SettingsPaths.TempPath", true));
@@ -96,6 +92,10 @@
             this.tempPathTextBox.Name = "tempPathTextBox";
             this.tempPathTextBox.Size = new System.Drawing.Size(273, 20);
             this.tempPathTextBox.TabIndex = 6;
+            // 
+            // BindingSource
+            // 
+            this.BindingSource.DataSource = typeof(DynamicTabView.ViewModels.SettingsPathsUserControlViewModel);
             // 
             // SettingsPathsUserControl
             // 
@@ -107,9 +107,10 @@
             this.Controls.Add(this.storagePathTextBox);
             this.Controls.Add(tempPathLabel);
             this.Controls.Add(this.tempPathTextBox);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BindingSource, "TabText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Name = "SettingsPathsUserControl";
             this.Size = new System.Drawing.Size(399, 81);
-            this.Title = "Pfade";
+            this.Text = "";
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -8,16 +8,10 @@
 
     public partial class ContactsUserControl : TabPageUserControl
     {
-        public ContactsUserControl(ContactsUserControlViewModel contactsUserControlViewModel) : base(contactsUserControlViewModel)
+        public ContactsUserControl()
         {
             InitializeComponent();
-
-            BindingSource.DataSource = DataContext;
-
-            if (contactsComboBox.SelectedItem != null)
-            {
-                ((ContactsUserControlViewModel)DataContext).CurrentContact = contactsComboBox.SelectedItem as Contact;
-            }
+            DataContextChanged += OnDataContextChanged;
         }
 
         private void contactsComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -25,6 +19,17 @@
             if (DataContext is ContactsUserControlViewModel && contactsComboBox.SelectedItem != null)
             {
                 ((ContactsUserControlViewModel)DataContext).CurrentContact = contactsComboBox.SelectedItem as Contact;
+            }
+        }
+
+        private void OnDataContextChanged(object sender, System.EventArgs e)
+        {
+            BindingSource.DataSource = DataContext;
+
+            if (contactsComboBox.SelectedItem != null && ((ContactsUserControlViewModel)DataContext).CurrentContact == null)
+            {
+                ((ContactsUserControlViewModel)DataContext).CurrentContact = 
+                    contactsComboBox.SelectedItem as Contact;
             }
         }
     }

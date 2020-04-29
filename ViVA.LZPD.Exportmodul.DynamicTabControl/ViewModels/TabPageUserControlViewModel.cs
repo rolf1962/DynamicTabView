@@ -1,14 +1,25 @@
 ﻿namespace ViVA.LZPD.Exportmodul.DynamicTabControl.ViewModels
 {
-    using System.ComponentModel;
-    using System.Runtime.CompilerServices;
-
-    public abstract class TabPageUserControlViewModel : INotifyPropertyChanged
+    public abstract class TabPageUserControlViewModel : ViewModelBase 
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        private string _tabText;
+
+        public TabPageUserControlViewModel()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            TabText = "Neuer Tab";
+        }
+
+        public string TabText
+        {
+            get { return _tabText; }
+            set
+            {
+                if (_tabText != value)
+                {
+                    _tabText = value;
+                    NotifyPropertyChanged();
+                }
+            }
         }
     }
 }

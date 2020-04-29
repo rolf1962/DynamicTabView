@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class TabControlUserControlViewModel
+    public class TabControlUserControlViewModel : ViewModelBase
     {
         public TabControlUserControlViewModel(TabPageUserControlSelector tabPageUserControlSelector)
         {

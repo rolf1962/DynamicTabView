@@ -7,26 +7,38 @@
 
     public partial class TabPageUserControl : UserControl
     {
-        /// <summary>
-        /// Der Standardkonstruktor wird vom Designer benötigt. Der kommt auch klar, wenn er "private" ist.
-        /// </summary>
-        private TabPageUserControl() { }
+        private TabPageUserControlViewModel _dataContext;
 
-        public TabPageUserControl(TabPageUserControlViewModel tabPageUserControlViewModel)
+        public TabPageUserControl()
         {
             InitializeComponent();
-            if (tabPageUserControlViewModel == null)
-            {
-                throw new ArgumentNullException(nameof(tabPageUserControlViewModel));
-            }
-
-            DataContext = tabPageUserControlViewModel;
         }
 
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        [Bindable(true)]
         [Description("Der Text, der auf dem Tab angezeigt wird."), Category("DynamicTabControl")]
-        public string Title { get; set; }
+        public override string Text { get; set; }
 
         [Description("Eine Implementierung der abstrakten Klasse \"TabPageUserControlViewModel\"."), Category("DynamicTabControl")]
-        public TabPageUserControlViewModel DataContext { get; }
+        public TabPageUserControlViewModel DataContext 
+        {
+            get { return _dataContext; }
+            set
+            {
+                if (_dataContext != value)
+                {
+                    _dataContext = value;
+                    NotifyDataContextChanged();
+                }
+            }
+        }
+
+        public event EventHandler DataContextChanged;
+        public void NotifyDataContextChanged()
+        {
+            DataContextChanged?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
